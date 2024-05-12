@@ -7,8 +7,10 @@ import { Router } from '@angular/router';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
+  users=[];
   constructor(private router:Router)
   {
+    localStorage.setItem("users",JSON.stringify(this.users));
   
   }
   connexion()
